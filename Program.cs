@@ -2,7 +2,7 @@
 namespace Activities {
     public class Program {
         public static bool IsNatural(int num) {
-            return num > 0;
+            return num >= 0;
         }
         public static bool IsNotNatural(int num)
         {
@@ -17,6 +17,10 @@ namespace Activities {
             }
             return num;
         }
+        public static bool IsEven(int num)
+        {
+            return num % 2 == 0; // Nova funcionalitat
+        }
         public static void Main()
         {
             // Test IsNatural
@@ -27,6 +31,10 @@ namespace Activities {
             Console.WriteLine(IsNotNatural(-3));
             // Test PowIt
             Console.WriteLine(PowIt(2, 3));
+            Console.WriteLine(PowIt(3, 2));
+            // Test IsEven
+            Console.WriteLine(IsEven(2));
+            Console.WriteLine(IsEven(3));
         }
     }
 }
