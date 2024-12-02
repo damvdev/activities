@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace Activities {
     public class Program {
         public static bool IsNatural(int num) {
@@ -8,6 +8,20 @@ namespace Activities {
         {
             return !IsNatural(num);
         }
+        public static int PowIt(int m, int n)
+        {
+            int num = 1;
+            for (int i = 0; i < n; i++)
+            {
+                num *= m;
+            }
+            return num;
+        }
+        public static bool IsEven(int num)
+        {
+            return num % 2 == 0; // Nova funcionalitat
+        }
+
         public static void Main()
         {
             // Test IsNatural
@@ -16,6 +30,13 @@ namespace Activities {
             // Test IsNotNatural
             Console.WriteLine(IsNotNatural(3));
             Console.WriteLine(IsNotNatural(-3));
+
+            // Test PowIt
+            Console.WriteLine(PowIt(2, 3));
+            Console.WriteLine(PowIt(3, 2));
+            // Test IsEven
+            Console.WriteLine(IsEven(2));
+            Console.WriteLine(IsEven(3));
         }
     }
 }
