@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 namespace Activities {
     public class Program {
         public static bool IsNatural(int num) {
-            return num >= 0;
+            return num > 0;
         }
         public static bool IsNotNatural(int num)
         {
@@ -21,6 +21,7 @@ namespace Activities {
         {
             return num % 2 == 0; // Nova funcionalitat
         }
+
         public static void Main()
         {
             // Test IsNatural
@@ -29,6 +30,7 @@ namespace Activities {
             // Test IsNotNatural
             Console.WriteLine(IsNotNatural(3));
             Console.WriteLine(IsNotNatural(-3));
+
             // Test PowIt
             Console.WriteLine(PowIt(2, 3));
             Console.WriteLine(PowIt(3, 2));
